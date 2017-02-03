@@ -1,10 +1,24 @@
+import { MailService } from './mail.service';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+          <phone-book></phone-book>   
+  `,
+  styleUrls : [`./app.component.css`]
+
 })
 export class AppComponent {
-  title = 'app works!';
+
+  onUpdate(id, text) {
+    this.mail.update(id, text);
+
+  }
+
+  constructor(private mail: MailService) {
+    
+
+  }
+
 }

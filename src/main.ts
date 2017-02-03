@@ -9,4 +9,9 @@ if (environment.production) {
   enableProdMode();
 }
 
+let initMap = function(){
+
+}
+
 platformBrowserDynamic().bootstrapModule(AppModule);
+
