@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div *ngFor="let client of clients">
       <phone-book-result-list-item class="cui__selector--direct__item" [person]="client">
-          <ng-content></ng-content>
+          <ng-content ></ng-content>
       </phone-book-result-list-item>
     </div>
   `,
-  styles: []
+  styles: [
+    `div{
+  }
+  `]
 })
 export class PhoneBookResultListComponent {
 
